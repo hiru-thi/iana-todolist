@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>iana</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- HEADER -->
+
+        <header>
+            <h1>iana <span>♥</span></h1>
+            <p>small tasks. clear mind.</p>
+        </header>
+
+
+        <!-- ADD TASK -->
+
+        <section class="add-section">
+
+            <div class="task-input">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="task"
+                    maxlength="100"
+                    autocomplete="off"
+                >
+
+
+                <!-- CUSTOM PRIORITY -->
+
+                <div class="priority-wrapper">
+
+                    <button
+                        type="button"
+                        id="priorityDropdown"
+                        class="priority-dropdown"
+                    >
+                        <span id="priorityValue">medium</span>
+                        <span class="dropdown-arrow">⌄</span>
+                    </button>
+
+
+                    <div
+                        id="priorityMenu"
+                        class="priority-menu"
+                    >
+
+                        <button
+                            type="button"
+                            class="priority-option"
+                            data-value="High"
+                        >
+                            <span class="option-dot high-dot"></span>
+                            high
+                        </button>
+
+                        <button
+                            type="button"
+                            class="priority-option selected"
+                            data-value="Medium"
+                        >
+                            <span class="option-dot medium-dot"></span>
+                            medium
+                        </button>
+
+                        <button
+                            type="button"
+                            class="priority-option"
+                            data-value="Low"
+                        >
+                            <span class="option-dot low-dot"></span>
+                            low
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ADD BUTTON -->
+
+                <button
+                    id="addTask"
+                    type="button"
+                >
+                    +
+                </button>
+
+            </div>
+
+
+            <!-- OPTIONAL DETAILS -->
+
+            <button
+                id="detailsToggle"
+                class="details-toggle"
+                type="button"
+            >
+                + details
+            </button>
+
+
+            <div
+                id="detailsPanel"
+                class="details-panel"
+            >
+
+                <div class="detail-field">
+
+                    <label for="deadlineDate">
+                        date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="deadlineDate"
+                    >
+
+                </div>
+
+
+                <div class="detail-field">
+
+                    <label for="deadlineTime">
+                        time
+                    </label>
+
+                    <input
+                        type="time"
+                        id="deadlineTime"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TABS -->
+
+        <nav class="tabs">
+
+            <button
+                class="tab active"
+                data-filter="active"
+            >
+                active
+            </button>
+
+            <button
+                class="tab"
+                data-filter="completed"
+            >
+                completed
+            </button>
+
+        </nav>
+
+
+        <!-- TASK LIST -->
+
+        <section id="taskList"></section>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+            <span id="remainingCount">
+                0 tasks remaining
+            </span>
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
