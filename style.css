@@ -761,6 +761,8 @@ footer {
         min-height: calc(100vh - 32px);
 
         padding: 38px 28px;
+        
+        border-radius: 18px;
     }
 
 
